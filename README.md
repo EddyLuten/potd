@@ -1,4 +1,4 @@
 potd
 ====
 
-ProblemOTD Solutions
+Problem of the Day Solutions (http://www.problemotd.com/)
