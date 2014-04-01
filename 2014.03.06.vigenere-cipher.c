@@ -15,5 +15,6 @@ int main()
     result[i] = ((MESSAGE[i] - 'A' + CIPHER[j] - 'A') % 26) + 'A';
 
   printf("%s", result);
+  free(result);
   return 0;
 }
