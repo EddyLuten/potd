@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#define SERVER_COUNT 4
 unsigned SERVERS[] = {
   357, 651, 101, 230
 };
+#define SERVER_COUNT (sizeof(SERVERS) / sizeof(unsigned))
 
 void remove_random(void)
 {
