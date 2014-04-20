@@ -1,4 +1,5 @@
 
+// 2014-04-20 - http://www.problemotd.com/problem/stacks-queues/
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -26,6 +27,7 @@ StackQueue* sq_create(unsigned capacity)
 {
   StackQueue* result = malloc(sizeof(StackQueue));
   result->elements = NULL;
+  result->count = 0;
   sq_resize(result, !capacity ? 5 : capacity);
   return result;
 }
@@ -87,6 +89,22 @@ int main(void)
   printf("Push: "); sq_push(sq, 7); sq_print(sq);
   printf("Popped: %u ", sq_pop(sq)); sq_print(sq);
   printf("Dequeued: %u ", sq_dequeue(sq)); sq_print(sq);
+
+  // Extra
+  printf("Push: "); sq_push(sq, 1); sq_print(sq);
+  printf("Push: "); sq_push(sq, 2); sq_print(sq);
+  printf("Push: "); sq_push(sq, 3); sq_print(sq);
+  printf("Push: "); sq_push(sq, 4); sq_print(sq);
+  printf("Push: "); sq_push(sq, 5); sq_print(sq);
+  printf("Push: "); sq_push(sq, 6); sq_print(sq);
+  printf("Dequeued: %u ", sq_dequeue(sq)); sq_print(sq);
+  printf("Dequeued: %u ", sq_dequeue(sq)); sq_print(sq);
+  printf("Dequeued: %u ", sq_dequeue(sq)); sq_print(sq);
+  printf("Dequeued: %u ", sq_dequeue(sq)); sq_print(sq);
+  printf("Dequeued: %u ", sq_dequeue(sq)); sq_print(sq);
+  printf("Dequeued: %u ", sq_dequeue(sq)); sq_print(sq);
+  printf("Dequeued: %u ", sq_dequeue(sq)); sq_print(sq);
+
   sq_destroy(sq);
 
   return EXIT_SUCCESS;
